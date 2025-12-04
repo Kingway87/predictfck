@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-brand: #FF700F;
+    --color-brand-hover: #FF8533;
+    --color-success: #22C55E;
+    --color-error: #EF4444;
+    --color-surface: #121212;
+    --color-border: #27272A;
+  }
+
+  body {
+    @apply antialiased bg-black text-zinc-400;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    @apply bg-black;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-white font-semibold;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
